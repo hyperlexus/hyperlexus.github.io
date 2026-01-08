@@ -246,13 +246,12 @@
                 invisiblePoly.on('click', onStreetClick);
                 invisibleLayerGroup.addLayer(invisiblePoly);
 
-                // 2. The Visible Background Line (thin, grey)
-                // We add 'interactive: false' so clicks pass through it to the invisible line below!
+                // light blue line
                 const visiblePoly = L.polyline(latLngs, {
-                    color: '#e0e0e0', // Very light grey
+                    color: '#add8e6', // Very light grey
                     weight: 4,
                     opacity: 1,
-                    interactive: false // CRITICAL: This ensures you don't click the grey line instead of the invisible one
+                    interactive: false
                 });
                 backgroundLayerGroup.addLayer(visiblePoly);
             });
